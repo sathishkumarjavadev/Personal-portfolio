@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sathish | Portfolio</title>
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style4.css" />
   </head>
 
   <body>
@@ -19,6 +19,9 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- 🔥 Theme Toggle Button -->
+        <button id="theme-toggle" class="btn secondary-btn">🌙</button>
       </nav>
     </header>
 
@@ -28,7 +31,9 @@
       <p>Java Full Stack Developer</p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn">View My Work</a>
+        <!-- ✅ FIXED BUTTON -->
+        <a href="#projects" class="btn primary-btn">View My Work</a>
+
         <a href="resume.pdf" download class="btn secondary-btn" target="_blank">
           Download Resume
         </a>
@@ -51,16 +56,13 @@
       <h2>My Projects</h2>
 
       <div class="project-container">
-        <!-- Project 1 -->
         <div class="project-card">
           <h3>Hostel Management System</h3>
           <p>
             Full stack application to manage student rooms, records, and admin
             operations.
           </p>
-
           <p><strong>Live Demo:</strong> Coming Soon</p>
-
           <a
             href="https://github.com/sathishkumarjavadev/hostelmanagement"
             target="_blank"
@@ -69,13 +71,10 @@
           </a>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-card">
           <h3>Parking Management System</h3>
           <p>System to manage vehicle entry, slot allocation, and billing.</p>
-
           <p><strong>Live Demo:</strong> Coming Soon</p>
-
           <a
             href="https://github.com/sathishkumarjavadev/parking-management-system"
             target="_blank"
@@ -91,15 +90,10 @@
       <h2>Contact Me</h2>
 
       <p>
-        <strong>Professional Email:</strong>
+        <strong>Email:</strong>
         <a href="mailto:sathishkumar.javadev@gmail.com">
           sathishkumar.javadev@gmail.com
         </a>
-      </p>
-
-      <p>
-        <strong>Personal Email:</strong>
-        <a href="mailto:nsk.nani007@gmail.com"> nsk.nani007@gmail.com </a>
       </p>
 
       <p><strong>Phone:</strong> +91 7339617585</p>
@@ -116,5 +110,21 @@
     <footer class="footer">
       <p>© 2026 Sathish | All Rights Reserved</p>
     </footer>
+
+    <!-- 🔥 Theme Toggle Script -->
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+
+        // Change icon
+        if (document.body.classList.contains("light")) {
+          toggleBtn.textContent = "☀️";
+        } else {
+          toggleBtn.textContent = "🌙";
+        }
+      });
+    </script>
   </body>
 </html>
